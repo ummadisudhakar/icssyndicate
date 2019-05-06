@@ -1,0 +1,35 @@
+client access details
+
+https://pattern-match.com/blog/2018/10/17/springboot2-with-oauth2-integration/
+https://blog.couchbase.com/oauth-2-dynamic-client-registration/
+https://www.javainuse.com/spring/spring-boot-oauth-authorization-code
+https://github.com/Akourtiim/oauth2-spring-boot-2.0.2/tree/master/authorization_server/src/main/java/com/aak/repository
+
+Customer creation 
+Client send an email to Super user to create customer
+SuperAdmin logs in and enters details with domains and login type(AAD or Okta)
+Customer created and stored in Middleware DB
+
+
+login flow -- New User Flow
+User enters username and password
+Fetches domains associated with the particular user 
+If domain exists
+validates user based on the domain against the identity provider registered with customer E.g AAD
+	If user is valid or exists 
+		gets the details from AAD stores the user details in Middleware DB with default role as Community user
+		Assigns customer to the user based on the domain
+else
+User is prompted with error message
+
+login flow -- existing user Flow
+User enters username and password
+Fetches domains associated with the particular user 
+
+	
+	
+		
+
+  
+
+
